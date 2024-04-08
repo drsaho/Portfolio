@@ -3,106 +3,171 @@
 --text-color: #000000;
 --header-color: rgb(255, 255, 255);
 
-
-
-
 }
+
+
+
 body{
     background-color: antiquewhite;
     height: 100%;
-}
-
-a{
-    color: var(--text-color);
-}
-
-p{
-    color: var(--text-color);
-    font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    background-color: orange;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: orange;
+  position: sticky;
+  overflow: hidden;
 }
 
-.pageHeader{
-    margin-left: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    color: var(--text-color);
+header h1 {
+  color: black;
+  margin: 5px 10px 5px 30px;
+  font-size: 50px;
+}
+
+header nav {
+  padding-top:0;
+  margin-right: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  background: black;
+  color: orange;
+  
+}
+p {
+  font-size: 28px;
+  padding: 10px 30px 0 20px;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+ .profilePic{
+    position: relative;
+    margin: 12px;
     
-}
-
-
-ul {
-    font-family: Arial, Helvetica, sans-serif;
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    overflow: hidden;
-    background-color: orange;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
-  }
-  .profilePic{
-    margin: 0;
-    padding: 20px;
   }
 
-  .mainBody{
+  .section {
     display: flex;
     flex-direction: column;
-    align-items:start;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: 15px;
+   
   }
 
-  #about{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    align-items: center;
-  }
-  .boxHeader{
-    border-right: 5px solid orange;
-    border-radius: 5px;
-    padding: 50px;
-    margin-right: 10px;
-  }
-#work{
-    margin-top: 300px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    align-items: center;
-}
+ 
   .boxContent{
-    margin-left: 10px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  #contact{
-    margin-top: 50px;
+    margin: 20px auto;
+    padding-bottom: 60px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    align-items: center;
+  }
+
+  .boxTitle {
+    padding-left: 15px;
+    font-size: 50px;
+    display: inline-block;
+    border-bottom: 5px solid;
+    margin-right: 35px;
+    color: var(--text-color);
+    text-align: right;
+    padding: 25px;
+    flex-basis: 25%;
 
   }
+  .boxBorder {
+    border-color: orange;
+}
+
+
+  .projects {
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 0 66%;
+}
+
+.boxProject{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+    margin: 12px;
+    width: fit-content;
+
+}
+
+
+
+ .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    section {
+      padding: 30px 15px;
+      text-align: center;
+    }
+    .boxContent {
+        flex-direction: column;
+    }
+    .boxHeader {
+        font-size: 48px;
+        text-align: center;
+        flex-direction: column;
+        border-bottom: 5px solid;
+        border-right: none;
+        padding: 15px;
+        margin: 0;
+    }
+    p {
+        flex-direction: column;
+        justify-content: center;
+        display: contents;
+        padding: 10px
+    }
+    .profile-pic {
+        justify-content: center;
+    }
+    .boxContent {
+      flex: 2 100%;
+      text-align: left;
+      justify-content: left;
+      display: flex;
+    }
+    .boxContent img {
+      flex: 0 32%;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      width: 90%;
+    }
+    a {
+      flex-direction: column;
+      justify-content: center;
+      display: contents;
+      padding: 10px
+    }
+}
